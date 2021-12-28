@@ -1,0 +1,60 @@
+<head>
+    <title>header</title>
+    <meta charset="utf-8">
+</head>
+<header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" routerLink="/">
+                <img src="/assets/images/workshop_logo.jpg" alt="WorkShop Builder">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu has-text-centered">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/"><i class="fa fa-home mr-1"
+                            aria-hidden="true"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/projects"><i class="fa fa-tasks mr-1"
+                            aria-hidden="true"></i>Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/aboutUs"><i class="fa fa-building mr-1"
+                            aria-hidden="true"></i>About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-item has-text-white " routerLink="/contactUs"><i class="fa fa-envelope mr-1"
+                            aria-hidden="true"></i>Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="control has-addons">
+                <p class="control is-expanded"><input class="input" type="text" placeholder="Find a project..."></p>
+            </div>
+            <div class="control">
+                <a class="button is-light is-outlined">
+                    Search
+                </a>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-white">
+                    More
+                </a>
+                <div class="navbar-dropdown is-right has-background-dark ">
+                    <a class="navbar-item has-text-white" href="#"><i class="fa fa-cog mr-1"
+                            aria-hidden="true"></i>Settings</a>
+                    <a class="navbar-item has-text-white" href="#"><i class="fa fa-sign-in mr-1"
+                            aria-hidden="true"></i>Sign in</a>
+                    <a class="navbar-item has-text-white" href="#"><i class="fa fa-user-plus mr-1"
+                            aria-hidden="true"></i>Sign up</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item has-text-white" href="/contactUs"><i class="fa fa-exclamation-triangle mr-1"
+                            aria-hidden="true"></i>Report an issue</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

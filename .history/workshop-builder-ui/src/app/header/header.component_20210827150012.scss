@@ -1,0 +1,20 @@
+nav {
+    background: #292929;
+}
+
+.navbar-item:hover {
+    background-color:#303030 !important;
+}
+
+.navbar-item has-dropdown is-hoverable has-text-white:hover {
+    background-color:#303030 !important;
+}
+
+img {
+    height: 10%;
+    width: 10%;
+}
+
+a:link {
+    color: inherit;
+}

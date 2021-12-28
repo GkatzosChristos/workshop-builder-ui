@@ -1,0 +1,88 @@
+<h1 class="title has-text-centered">Contact Us</h1>
+
+<body>
+  <section>
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <div class="field">
+        <div class="field">
+          <label class="label has-text-centered">Name</label>
+          <input class="input" type="text" name="name" placeholder="Name" [(ngModel)]="name" #nameInput="ngModel"
+            required>
+          <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+            <p class="help is-danger">This username is required!</p>
+          </div>
+          <div class="help invalid-feedback" *ngIf="nameInput.valid && nameInput.dirty">
+            <p class="help is-success">This username is Availible!</p>
+          </div>
+        </div>
+        <div class="field column is-4">
+          <label class="label has-text-centered">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" name="usename" placeholder="Username" [(ngModel)]="username"
+              #usernameInput="ngModel" required>
+            <span class="icon is-small is-left">
+              <i class="fa fa-user"></i>
+            </span>
+            <div class="help is-error" *ngIf="usernameInput.invalid && usernameInput.touched">
+              <p class="help is-danger">This username is required!</p>
+            </div>
+            <div class="help is-error" *ngIf="usernameInput.valid && usernameInput.dirty">
+              <p class="help is-success">This username is Availible!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field column is-4">
+          <label class="label has-text-centered">Email</label>
+          <div class="control has-icons-left">
+            <input class="input" type="email" name="email" placeholder="e.g. JonhSmith@gmail.com" #emailInput="ngModel"
+              [(ngModel)]="email" required email>
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <div class="help is-error is-danger" *ngIf="emailInput.invalid && emailInput.touched">
+              <p class="help is-danger">The email required and must be valid!</p>
+            </div>
+            <div class="help is-error" *ngIf="emailInput.valid && emailInput.dirty">
+              <p class="help is-success">This email is valid!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field column is-4">
+          <label class="label has-text-centered">Subject</label>
+          <div class="control">
+            <input class="input is-expand" type="text" name="subject" placeholder="e.g. Getting an error"
+              [(ngModel)]="subject">
+          </div>
+        </div>
+
+        <div class="field column is-4 ">
+          <label class="label has-text-centered">Message</label>
+          <div class="control">
+            <textarea class="textarea" name="message" placeholder="I have a problem...."
+              [(ngModel)]="message"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" #checkboxInput>
+              I agree to the <a href="#">terms and conditions</a>
+            </label>
+          </div>
+        </div>
+
+        <div class="field is-grouped mb-4 is-grouped-centered">
+          <div class="control">
+            <button class="button is-link" [disabled]="contactForm.invalid">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light" type="reset" (click)="onReset()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
